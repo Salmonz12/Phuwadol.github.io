@@ -1,0 +1,223 @@
+/* RESET */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* VIDEO BG (เฉพาะส่วน About/Hero) */
+#myVideo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  object-fit: cover;
+  filter: blur(0px);
+}
+
+/* NAV */
+.nav{
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 999;
+  display: flex;
+  gap: 18px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+}
+.nav a{
+  color: wheat;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* BUTTON */
+.toggle-btn{
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 999;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+.section{
+  min-height: 100vh;
+  padding: 90px 10% 60px;
+  position: relative;
+}
+
+/* HERO ABOUT */
+.hero{
+  display: flex;
+  align-items: center;
+}
+.hero-inner{
+  max-width: 720px;
+}
+.hero h1{
+  font-size: 56px;
+  margin: 0 0 12px;
+  text-shadow: 0 0 24px rgba(255,255,255,0.25);
+}
+.hero p{
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+.accent{ color: #ffd36b; }
+
+.hero-actions{
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+.btn{
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn.ghost{
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #fff;
+}
+
+/* CLOCK */
+.clock-section{
+  background: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock-wrap{
+  text-align: center;
+  padding: 30px 26px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+#timeBox{
+  font-size: 72px;
+  margin: 0;
+  text-shadow: 0 0 22px rgba(255,255,255,0.35);
+}
+
+/* PROJECT */
+.project-section{
+  background: aliceblue;
+  color: #111;
+}
+.title{
+  margin: 0 0 18px;
+  text-align: center;
+  font-family: fantasy;
+}
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* PROJECT CARD */
+.anime_div{
+  position: relative;
+  width: 240px;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  cursor: pointer;
+  transition: transform .25s ease;
+}
+.anime_div:hover{ transform: translateY(-6px); }
+
+.anime_div img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.anime_div p{
+  margin: 10px 12px 14px;
+  font-size: 14px;
+}
+.episode_amount{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  color: red;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 99px;
+}
+
+/* GALLERY */
+.gallery-section{
+  background: #0b0b0b;
+}
+.photo-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+}
+.photo-grid img{
+  height: 34vh;
+  width: auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* THANKS */
+.thanks{
+  margin-top: 30px;
+  text-align: center;
+  opacity: 0.95;
+}
+
+/* SCROLL ANIMATION */
+.scroll-up{
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.85s ease, transform 0.85s ease;
+  will-change: transform, opacity;
+}
+.scroll-up.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* DARK MODE */
+.dark-mode{
+  background: #000;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px){
+  .hero h1{ font-size: 40px; }
+  #timeBox{ font-size: 52px; }
+  .nav a{ font-size: 16px; }
+  .photo-grid img{ height: 24vh; }
+}

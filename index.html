@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<button class="toggle-btn" onclick="toggleDarkMode()">Toggle dark mode</button>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#about">About</a>
+  <a href="#clock">Clock</a>
+  <a href="#project">Project</a>
+  <a href="#gallery">Gallery</a>
+</nav>
+
+<!-- 1) ABOUT (ย้ายมาเป็นหน้าหลัก) -->
+<section class="section hero" id="about">
+  <div class="hero-inner">
+    <h1 class="scroll-up">สวัสดีครับ ผมชื่อ <span class="accent">ม่อน</span></h1>
+    <p class="scroll-up">
+      ผมสนใจด้าน Web Development และเคยเข้าร่วมค่าย CE Next Gen (สาย WEB)  
+      ได้เรียนรู้ HTML, CSS, JavaScript และฝึกทำโปรเจกต์เดี่ยวภายใต้เวลาจำกัด
+    </p>
+
+    <div class="hero-actions scroll-up">
+      <a class="btn" href="#project">ดูโปรเจกต์</a>
+      <a class="btn ghost" href="https://github.com/Salmonz12/Phuwadol.github.io" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <video autoplay muted loop id="myVideo">
+    <source src="black.mp4" type="video/mp4">
+  </video>
+</section>
+
+<!-- 2) CLOCK -->
+<section class="section clock-section" id="clock">
+  <div class="clock-wrap scroll-up">
+    <h1 id="timeBox"></h1>
+    <h2>เวลาปัจจุบัน</h2>
+  </div>
+</section>
+
+<!-- 3) PROJECT -->
+<section class="section project-section" id="project">
+  <h1 class="title scroll-up">Project</h1>
+  <div id="container" class="cards"></div>
+</section>
+
+<!-- 4) GALLERY + THANK YOU -->
+<section class="section gallery-section" id="gallery">
+  <h1 class="title scroll-up">Gallery</h1>
+
+  <div id="photo" class="photo-grid">
+    <img src="mon.png" class="scroll-up" alt="">
+    <img src="mon1.png" class="scroll-up" alt="">
+    <img src="mon2.png" class="scroll-up" alt="">
+    <img src="mon3.png" class="scroll-up" alt="">
+  </div>
+
+  <div class="thanks scroll-up">
+    <h2>ขอบคุณที่เข้ามารับชมครับ 🙏</h2>
+    <p>หากต้องการติดต่อหรือดูผลงานเพิ่มเติม สามารถดูได้ที่ GitHub หรือช่องทางที่ผมใส่ไว้</p>
+  </div>
+</section>
+
+<script type="module" src="script.js"></script>
+<script>
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
